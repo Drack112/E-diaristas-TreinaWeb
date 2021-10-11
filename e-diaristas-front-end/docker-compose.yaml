@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+
+  app:    
+    build: . 
+    entrypoint: ./.docker/entrypoint.sh
+    container_name: e-diaristas_frontend
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/home/node/app
+  
