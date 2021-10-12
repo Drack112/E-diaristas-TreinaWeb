@@ -8,6 +8,7 @@ import {
 
 interface PageTitleProps {
 	title: string
+	// String ou elemento JSX
 	subtitle?: string | JSX.Element
 }
 

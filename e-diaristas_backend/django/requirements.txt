@@ -1,0 +1,4 @@
+django
+pillow
+django-crispy-forms
+easy-mask

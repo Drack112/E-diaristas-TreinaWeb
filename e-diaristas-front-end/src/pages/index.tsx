@@ -36,8 +36,10 @@ export default function Home() {
 			<Container>
 				<FormElementsContainer>
 					<TextFieldMask
+						// React Input Mask
 						mask={"99.999-999"}
 						label={"Digite seu CEP"}
+						// Cubra a tela inteira
 						fullWidth
 						variant={"outlined"}
 						value={cep}
@@ -58,6 +60,7 @@ export default function Home() {
 				</FormElementsContainer>
 
 				{buscaFeita &&
+					// Se tiver mais de 1 diarista
 					(diaristas.length > 0 ? (
 						<ProfissionaisPaper>
 							<ProfissionaisContainer>

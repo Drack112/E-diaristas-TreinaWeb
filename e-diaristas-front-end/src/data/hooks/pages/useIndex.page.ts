@@ -5,6 +5,7 @@ import { ApiService } from "data/services/ApiService"
 
 // Logica da aplicação
 export default function useIndex() {
+	// useState
 	const [cep, setCep] = useState(""),
 		cepValido = useMemo(() => {
 			return ValidationService.cep(cep)
@@ -12,6 +13,7 @@ export default function useIndex() {
 		[erro, setErro] = useState(""),
 		[buscaFeita, setBuscaFeita] = useState(false),
 		[carregando, setCarregando] = useState(false),
+		// Setar valores de diaristas de acordo com a interface que usamos
 		[diaristas, setDiaristas] = useState([] as UserShortInterface[]),
 		[diaristasRestantes, setDiaristasRestantes] = useState(0)
 

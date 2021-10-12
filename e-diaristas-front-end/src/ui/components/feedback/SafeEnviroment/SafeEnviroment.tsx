@@ -4,6 +4,7 @@ import { Container } from "@mui/material"
 
 const SafeEnviroment = () => {
 	return (
+		// i --> icone
 		<>
 			<SafeEnviromentContainer>
 				<Container>
