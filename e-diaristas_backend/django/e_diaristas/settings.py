@@ -38,19 +38,27 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # Ativar o pacote crispy
+    # Django rest
+    'rest_framework',
+    # Formatar formularios com templates bootstrap
     'crispy_forms',
     # Pacote para usar mascaras no HTML
     'easy_mask',
-    'web'
+    # Permitir aplicações usarem nossa API
+    'corsheaders',
+    'web',
+    'api'
 ]
 
 # Qual template de forms o CRISPY pode ser aplicado
+CORS_ALLOW_ALL_ORIGINS = True
+
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
