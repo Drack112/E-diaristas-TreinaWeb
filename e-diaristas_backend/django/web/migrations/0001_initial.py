@@ -7,27 +7,34 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Diarista',
+            name="Diarista",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('nome_completo', models.CharField(max_length=100)),
-                ('cpf', models.CharField(max_length=11, unique=True)),
-                ('email', models.EmailField(max_length=254, unique=True)),
-                ('telefone', models.CharField(max_length=11)),
-                ('logradouro', models.CharField(max_length=60)),
-                ('numero', models.IntegerField()),
-                ('bairro', models.CharField(max_length=30)),
-                ('complemento', models.CharField(blank=True, max_length=100)),
-                ('cep', models.CharField(max_length=8)),
-                ('estado', models.CharField(max_length=2)),
-                ('cidade', models.CharField(blank=True, max_length=30)),
-                ('codigo_ibge', models.IntegerField()),
-                ('foto_usuario', models.ImageField(upload_to='')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("nome_completo", models.CharField(max_length=100)),
+                ("cpf", models.CharField(max_length=11, unique=True)),
+                ("email", models.EmailField(max_length=254, unique=True)),
+                ("telefone", models.CharField(max_length=11)),
+                ("logradouro", models.CharField(max_length=60)),
+                ("numero", models.IntegerField()),
+                ("bairro", models.CharField(max_length=30)),
+                ("complemento", models.CharField(blank=True, max_length=100)),
+                ("cep", models.CharField(max_length=8)),
+                ("estado", models.CharField(max_length=2)),
+                ("cidade", models.CharField(blank=True, max_length=30)),
+                ("codigo_ibge", models.IntegerField()),
+                ("foto_usuario", models.ImageField(upload_to="")),
             ],
-        ),
+        )
     ]

@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 
+
 class Diarista(models.Model):
     nome_completo = models.CharField(max_length=100, null=False, blank=False)
     cpf = models.CharField(max_length=11, null=False, blank=False, unique=True)

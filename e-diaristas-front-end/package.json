@@ -1,30 +1,30 @@
 {
-  "name": "e-diaristas-front-end",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "format": "prettier ./prettier.config.js --write src/*"
-  },
-  "dependencies": {
-    "@emotion/react": "^11.4.1",
-    "@emotion/styled": "^11.3.0",
-    "@mui/material": "^5.0.3",
-    "@types/react-input-mask": "^3.0.1",
-    "axios": "^0.22.0",
-    "next": "11.1.2",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-input-mask": "^2.0.4"
-  },
-  "devDependencies": {
-    "@types/react": "17.0.27",
-    "eslint": "8.0.0",
-    "eslint-config-next": "11.1.2",
-    "prettier": "^2.4.1",
-    "typescript": "4.4.3"
-  }
+	"name": "e-diaristas-front-end",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint",
+		"format": "prettier ./prettier.config.js --write src/*"
+	},
+	"dependencies": {
+		"@emotion/react": "^11.4.1",
+		"@emotion/styled": "^11.3.0",
+		"@mui/material": "^5.0.3",
+		"@types/react-input-mask": "^3.0.1",
+		"axios": "^0.22.0",
+		"next": "11.1.2",
+		"react": "17.0.2",
+		"react-dom": "17.0.2",
+		"react-input-mask": "^2.0.4"
+	},
+	"devDependencies": {
+		"@types/react": "17.0.27",
+		"eslint": "8.0.0",
+		"eslint-config-next": "11.1.2",
+		"prettier": "^2.4.1",
+		"typescript": "4.4.3"
+	}
 }
