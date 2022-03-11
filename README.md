@@ -29,7 +29,7 @@ O projeto trata-se de uma plataforma para a contratação de diarista.
 
 ###
 
-### 🔖 Licensa
+### 🔖 Licença
 
 Clique na logo abaixo para conferir mais sobre a **_licença_** do projeto.
 
