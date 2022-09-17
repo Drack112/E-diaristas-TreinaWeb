@@ -1,12 +1,11 @@
 <h1 align="center">
-    <img alt="E-Diaristas" title="E-Diaristas" src="../.github/logo.svg" width="220px" />
+    <img alt="E-Diaristas" title="E-Diaristas" src="./.github/media/logo.svg" width="220px" />
 </h1>
 
 <p align="center">
   <a href="#rocket-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#rodando">Rodando</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-como-contribuir">Como contribuir</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
 
 <a id="-projeto">
@@ -19,7 +18,7 @@
 <br>
 
 <p align="center">
-  <img alt="E-Diaristas-Frontend" src="../.github/app.png" width="100%">
+  <img alt="E-Diaristas-Frontend" src="./.github/media/app.png" width="100%">
 </p>
 
 <a id="rocket-tecnologias"></a>
@@ -28,43 +27,79 @@
 
 O Backend da aplicação foi desenvolvido com as seguintes tecnologias:
 
-![](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white) ![](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white) ![](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![Sqlite](https://img.shields.io/badge/sqlite-%23316192.svg?style=for-the-badge&logo=sqlite&logoColor=white) ![](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white) ![DjangoREST](https://img.shields.io/badge/DJANGO-REST-ff1709?style=for-the-badge&logo=django&logoColor=white&color=ff1709&labelColor=gray) ![](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
-<a id="rodando"></a>
+<a id="run"></a>
 
-## 💻 Rodando
+## :running: Rodando o projeto
 
-### 📁 Rodando através da fonte:
+### 💻 Pré-requisitos
 
-Tenha certeza de ter o Python instalado com PIP.
+Antes de começar, verifique se você atendeu aos seguintes requisitos:
 
-Abra o terminal no projeto e então execute os códigos abaixo.
+- Você instalou a versão mais recente de `< Docker/ Python>`
+- Você tem uma máquina `< Windows / Linux / Mac >`.
+- Você possui um `< Editor de código ou IDE & Gerenciador de banco de dados >`.
 
-Para instalar as dependências:
+## ☕ Pequena ajuda
 
-```bash
-pip install -r requirements.txt
+Preencha o arquivo `.env.example`, localizado em `./ediaristas`, com as informações cobradas e depois renomeie para `.env`.
+
+```env
+SECRET_KEY=
+DEBUG=
+
+# Ignore o DATABASE_URL, ele é somente usado quando upado na Heroku
+DATABASE_URL=
+
+EMAIL_HOST_USER=
+EMAIL_HOST_PASSWORD=
+
+GOOGLE_API_KEY=
+
+PAGARME_KEY=
+
+URL_FRONTEND=http://localhost:3000
+
+AWS_ACCESS_KEY_ID=
+AWS_SECRET_ACCESS_KEY=
+AWS_STORAGE_BUCKET_NAME=ediaristas-python
+
+
 ```
 
-Antes de iniciar a aplicação tenha certeza que você realizou as migrações pro banco de dados SQLITE.
+## Serviços necessários antes de rodar a aplicação:
+
+Lembre-se de pegar as suas chaves de API nos serviços da **[AWS](hhttps://aws.amazon.com/pt/)**, do serviço de email **[Mailgun](https://www.mailgun.com)**, o serviço de mapas do **[Google](https://developers.google.com/maps/documentation/javascript/get-api-key)** e do **[Pagar.Me](https://docs.pagar.me/v2/docs/api-key-e-encryption-key)**.
+
+## Se lembre de ter o Docker :ocean:
+
+### UM comando só:
 
 ```bash
-python manage.py makemigrations && python manage.py migrate
+$ docker-compose up web
 ```
 
-Para rodar a aplicação:
+### Manualmente:
+
+Crie a sua pasta de venvs:
 
 ```bash
-python manage.py runserver
+$ python -m venv .venv && source ./.venv/bin/activate
 ```
 
-## 🤔 Como contribuir
+Agora realize as migrações necessárias:
 
-<a id="-como-contribuir"></a>
+```bash
+$ python manage.py makemigrations && python manage.py migrate
+```
 
-- Faça um fork desse repositório;
-- Cria uma branch com a sua feature: `git checkout -b minha-feature`;
-- Faça commit das suas alterações: `git commit -m 'feat: Minha nova feature'`;
-- Faça push para a sua branch: `git push origin minha-feature`.
+E por fim, rode o aplicativo:
 
-Depois que o merge da sua pull request for feito, você pode deletar a sua branch.
+```bash
+$ python manage.py runserver
+```
+
+#### _Sinta-se livre para colaborar, toda ajuda é bem vinda ;)_
+
+ <br/>

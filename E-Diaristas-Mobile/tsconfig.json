@@ -1,11 +1,12 @@
 {
-  "extends": "expo/tsconfig.base",
-  "compilerOptions": {
-    "strict": true,
-    "baseUrl": "src",
-    "paths": {
-      "@styles/*": ["ui/styles/*"],
-      "@assets/*": ["../assets/*"]
+    "extends": "expo/tsconfig.base",
+    "compilerOptions": {
+        "strict": true,
+        "baseUrl": "src",
+        "paths": {
+            "@partials/*": ["ui/partials/*"],
+            "@styles/*": ["ui/styles/*"],
+            "@assets/*": ["../assets/*"]
+        }
     }
-  }
 }

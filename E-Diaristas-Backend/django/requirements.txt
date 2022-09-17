@@ -1,7 +1,0 @@
-django
-pillow
-django-crispy-forms
-easy-mask
-requests
-djangorestframework
-django-cors-headers

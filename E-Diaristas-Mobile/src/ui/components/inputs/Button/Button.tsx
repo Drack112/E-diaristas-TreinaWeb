@@ -1,4 +1,5 @@
-import React from "react";
-import { ButtonStyled } from "./Button.style";
+import { ButtonStyled } from './Button.style';
 
-export default ButtonStyled;
+const Button = ButtonStyled;
+
+export default Button;
